@@ -30,12 +30,12 @@
 
 
 
-print("*** ИГРЫ С ЧИСЛАМИ ***")
+print("*** NUMBRIDEGA MÄNGUD ***")
 print()
 #'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 while 1:
     try:
-        a = abs(int(input("Sisesta täisarv => ")))   #Скобки были не до конца закрыты
+        a = abs(int(input("Sisesta täisarv => ")))   # Sulud ei olnud lõpuni suletud.
         break
     except ValueError:
          print("See pole täisarv.")
@@ -47,14 +47,14 @@ else:
     print("Määrake, kui palju on paaris- ja mitu paaritut numbrit")
     print()
     c=b=a
-    paaris = 0 #Было два =
-    paaritu = 0 #Было два =
-    while b > 0:    # Стояло неправильное двоеточие.
+    paaris = 0 #Oli kaks =
+    paaritu = 0 #Oli kaks =
+    while b > 0:    # Oli vale semicolon
             if b % 2 == 0:
                     paaris += 1
             else:
                     paaritu += 1
-            b = b // 10     #Убрал лишний отступ
+            b = b // 10     #Kõrvaldan üleliigse taganemise
 
     print("Paaris numbrid:", paaris)
     print("Paaritu numbrid:", paaritu)
@@ -63,26 +63,26 @@ else:
     print("*Pöörake* sisestatud arv")
     print()
     b=0
-    while a > 0: #Не было двоеточия
+    while a > 0: #Ei olnud semicolon
         number = a % 10
         a = a // 10
         b = b * 10
-        b += number #был лишний пробел
+        b += number #oli üleliigne tühik
     print("*Pööratud* arv", b)
     print()
 #''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    print("Uurime Syracuse hüpoteesi") #Убрал лишнюю скобку
+    print("Uurime Syracuse hüpoteesi") #Eemaldasin üleliigse sulguri
 
     print()
     if c % 2 == 0:
-        print(c ,"- Paaris arv. Jagame 2.") #переменная не там стояла
+        print(c ,"- Paaris arv. Jagame 2.") #muutuja oli vale kohal
     else:
-        print(c ,"- Paaritu arv. Korrutame 3, liidame 1 ja jagame 2.")   #переменная не там стояла
+        print(c ,"- Paaritu arv. Korrutame 3, liidame 1 ja jagame 2.")   #muutuja oli vale kohal
     while c != 1:
-            if c % 2 == 0:  #Не хватало пробела
-                    c = c / 2  #Не хватало пробела
+            if c % 2 == 0:  #Ei ole tühik
+                    c = c / 2  #Ei ole tühik
             else:
                     c = (3*c + 1) / 2
-            print   (int(c), end="")    #Стояли неправильные двойные кавычки
+            print   (int(c), end="")    #Seissid valed topeltjutumärgid
     print()
-    print("Гипотеза верна") #Стояли неправильные двойные кавычки
+    print("Гипотеза верна") #Seissid valed topeltjutumärgid
